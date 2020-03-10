@@ -65,8 +65,8 @@ class VndErrorJsonRenderer extends AbstractVndErrorRenderer {
                 call(MESSAGE_ATTRIBUTE, msg)
                 def path = linkGenerator.link(resource: target, method: HttpMethod.GET, absolute: absoluteLinks)
                 call(PATH_ATTRIBUTE, path)
-                call(LINKS_ATTRIBUTE) {
-                    call(RESOURCE_ATTRIBUTE) {
+                LINKS_ATTRIBUTE {
+                    RESOURCE_ATTRIBUTE {
                         call(HREF_ATTRIBUTE, path)
                     }
                 }
